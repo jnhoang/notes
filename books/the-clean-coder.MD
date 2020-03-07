@@ -23,4 +23,31 @@ Understand the problems of the people you work for/under. Adopting the problems 
   * design/develop features with the customer in mind
   * avoid us vs them attitude with stakeholders
   
-## Chapter 2 -Saying No
+  
+  
+## Chapter 2 - Saying No
+
+### Advesarial Roles
+Each role is in an organization has an objective, those objectives may clash be it in the form of time constraints, code standards, etc. Be ready to defend your objective. Best outcome is to enact the shared goal of the roles involved.
+
+Via negotiation:
+ * dig-in to a request, why does it need to be done by a date, what can be sacrificed in its place, what features might be missing d/t to the timeline.
+ * be ready to explain the intricacies of why a task is set for x amount of time.
+
+Via alternatives:
+ * if something is required for a demonstration, does it need to be fully featured? Can it be a mockup? 
+
+what are you trying to prevent
+
+### Being a Team Player and Trying
+Represent your team legitimately, don't oversell the team's capabilities. Don't sacrifice quality. _The promise to try is an admission that you've been holding back_
+Fight back saying yes for appeasement and be true to yourself.
+
+
+
+## Chapter 3 - Saying Yes
+
+
+
+
+
