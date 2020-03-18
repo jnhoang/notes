@@ -47,6 +47,59 @@ Fight back saying yes for appeasement and be true to yourself.
 
 ## Chapter 3 - Saying Yes
 
+### Use language of commitment - Say. Mean. Do.
+1. say you'll do it.
+2. You mean it.
+3. You actually do it.
+
+Ways to commit:
+* set a time expectation
+* commit to actions that cut through dependencies
+  * set a meeting time with dependencies to address an issue
+  * set recurring times if needed to get unblocked
+  * mock or setup copy of the service to continue your work
+* if ability to do something is unsure, commit to actions closer to the target
+  * if unable to fix x bugs, try to repro them and take notes
+
+Avoid language of ambiguity.
+Such as:
+* "hope/wish to get to it"
+* "I agree that should/needs be done"
+* "let's do this some time"
+
+### Define ambiguous language
+* I think I can get that done
+  * by what date
+  * can you commit to the date that you provide
+* I will have x done
+  * will that include tests, documentation, etc
+
+### Chapter 4 - Coding
+
+Code must:
+1. work
+2. solve the problem set by the customer
+3. fit well into the existing solution - should not be fragile, opaque
+4. be readable by other programmers - clear intent
+
+
+It's better to code in the right frame of mind. 
+Avoid: 
+* coding tired
+* coding distracted by some other issue
+
+Debugging definitely counts to coding time. Consider them the same and debug with intent.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
