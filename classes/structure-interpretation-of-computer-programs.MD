@@ -89,6 +89,28 @@
   - growth rate is greater in proportion to the increase of size _n_
 * logarithmic
   - growth rate is lesser in proportion to the increase of size _n_
-  - imagine the inverse of exponential growth
+  - imagine the inverse of exponential growthgit
 
 
+# Lesson 5: Data Abstraction
+
+## Process of procedural (function) abstraction
+* define formal params
+* capture process in body of procedure
+* give the procedure a name
+* hide implementation details from users (who should jut invoke the procedure name)
+
+* cons (short for constructors)
+  * returns a PAIR (car, cdr) [value, pointer]
+  * it's like a node (value, pointer)
+
+
+# Lessson 6: Types and Higher Order Procedures
+
+## Types
+* a mathematical theory for reasoning efficiently about programs
+  * useful for preventing common types of errors
+
+## Higher Order Procedures
+* can take procedures as input
+* can give procedures as output
