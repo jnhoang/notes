@@ -108,9 +108,18 @@
 # Lessson 6: Types and Higher Order Procedures
 
 ## Types
-* a mathematical theory for reasoning efficiently about programs
+* what is a type?
+  * a set of values
+  * procedure/function types
+    * indicate number of param required and the type of each param
+    * indicate the type of the return (result of the procedure)
+    * python example (def square(x: int) -> int: return x * x)
+* what are Types?
+  * a mathematical theory for reasoning efficiently about programs
   * useful for preventing common types of errors
 
+
 ## Higher Order Procedures
-* can take procedures as input
-* can give procedures as output
+
+* Definition - can take procedures as input or give a procedure as an output
+* application - capture common patterns and procedures (computations) and mapping them to values.
