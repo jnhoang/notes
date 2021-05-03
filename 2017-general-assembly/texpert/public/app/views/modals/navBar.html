@@ -1,0 +1,73 @@
+<div ng-controller="NavCtrl">
+  <nav class="navbar-fixed deep-purple" role="navigation">
+    <div class="nav-wrapper">
+      <a class="" href="/">
+        <img class="" ng-src="../../img/logo.png">
+      </a>
+
+      <ul class="right">
+        <li>
+          <a
+            ng-show="currentUser" 
+            ng-href="/messages">
+            Message Board
+          </a>
+        </li>
+        <li>
+          <a
+            ng-show="currentUser && currentUser.userType == 'user'" 
+            data-target="helpModal" modal>
+            Request Help
+          </a>
+        </li>
+        <li>
+          <a 
+            ng-show="userLoggedIn()"
+            ng-href="/users/{{ currentUserInfo.id }}">
+            {{ currentUser.name }}
+          </a>
+        </li>
+        <li>
+          <a 
+            ng-hide="userLoggedIn()" 
+            data-target="signupModal" modal>
+            Signup
+          </a>
+        </li>
+        <li>
+          <a
+            ng-hide="userLoggedIn()"
+            data-target="loginModal" modal>
+            Login
+          </a>
+        </li>
+        <li>
+          <a 
+            ng-click="logout()" 
+            ng-show="userLoggedIn()">
+            Logout
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- Modals -->
+  <div 
+    id="helpModal" 
+    class="modal">
+    <div ng-include="'app/views/modals/helpRequestForm.html'"></div>
+  </div>
+  <div 
+    id="loginModal" 
+    class="modal">
+    <div ng-include="'app/views/modals/userLogin.html'"></div>
+  </div>
+
+  <div
+    id="signupModal"
+    class="modal">
+    <div ng-include="'app/views/modals/userSignup.html'"></div>
+  </div>
+</div>

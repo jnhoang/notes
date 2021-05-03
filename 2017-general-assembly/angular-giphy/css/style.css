@@ -1,0 +1,9 @@
+#results {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+img {
+	margin: 5px;
+}

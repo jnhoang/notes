@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app='FruitNVeggies'>
+    <head>
+        <title>Fruit and Veggies</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+        <script src="js/fruits_and_veggies_test.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-controller='FruitVeggies'>
+        <div class="container">
+            <h1 class='text-center'>Fruit and Veggies</h1>
+            <div class="row">
+                
+                <div class="col-xs-4">
+                    <h1 class='text-center'><u>Fruits</u></h1>
+                    <ul>
+                        <li
+                            class='well'
+                            ng-class='{
+                                red: storage[fruit] == "red",
+                                green: storage[fruit] == "green"}' 
+                            ng-repeat='fruit in fruits'
+                        >
+                            <p>{{ fruit }}</p>
+                            
+                            <button 
+                                class='btn btn-default' 
+                                ng-click='move("fromFruits")'
+                            >
+                                <span class='glyphicon glyphicon-arrow-right'></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-4">
+                    <h1 class='text-center'><u>Pool</u></h1>
+                    <ul>
+                        <li 
+                            class='well text-center' 
+                            ng-repeat='stuff in combined track by $index'
+                        >
+                            <button 
+                                class='btn btn-default' 
+                                ng-click='move("toFruits")'
+                            >
+                                <span class='glyphicon glyphicon-arrow-left'></span>
+                            </button>
+
+                            <p>{{ stuff }}</p>
+                            
+                            <button 
+                                class='btn btn-default' 
+                                ng-click='move("toVeggies")'
+                            >
+                                <span class='glyphicon glyphicon-arrow-right'></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-4">
+                    <h1 class='text-center'><u>Veggies</u></h1>
+                    <ul>
+                       <li 
+                            class='well' 
+                            ng-class='{
+                                red: storage[veggie] == "red",
+                                green: storage[veggie] == "green"
+                                }'
+                            ng-repeat='veggie in veggies'
+                        >
+                           <button 
+                                class='btn btn-default' 
+                                ng-click='move("fromVeggies")'
+                            >
+                               <span class='glyphicon glyphicon-arrow-left'></span>
+                           </button>
+                           
+                           <p>{{ veggie }}</p>
+
+                       </li> 
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

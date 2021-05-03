@@ -1,0 +1,10 @@
+<h2>Current Teams signed up for the Hackathon</h2>
+
+<h3>Number of Teams: <%= teams.length %></h3>
+
+<% teams.forEach(function(t) {%>
+	<h3><%= t.teamName %>: <%= t.teamMembers %></h3>
+	<a href='/teams/<%= t.teamName%>' class='deleteLink btn btn-danger'>Delete</a>
+	<a href='/teams/<%= t.teamName%>/edit' class='btn btn-info'>Edit</a>
+	<hr>
+<% }); %>

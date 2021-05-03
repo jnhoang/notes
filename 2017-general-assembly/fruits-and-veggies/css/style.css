@@ -1,0 +1,21 @@
+/* file for your css */
+ul {
+	list-style: none;
+	padding: 0px;
+}
+.well {
+	display: flex;
+	justify-content: space-between;
+}
+.centered {
+	align-self: center;
+}
+.red {
+	background-color: #E5565C;
+}
+.green {
+	background-color: #369978;
+}
+body {
+	font-family: 'Arial Black';
+}

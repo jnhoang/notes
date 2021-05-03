@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TravelSensei">
+  <head>
+    <base href="/">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Sensei</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- CSS --> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <!-- Angular Resource -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.js"></script>
+    <!-- Angular Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <!-- Public Files -->
+    <!-- Routes -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/routes/authInterceptor.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="app/controllers/AlertsController.js"></script>
+    <script type="text/javascript" src="app/controllers/LoginController.js"></script>
+    <script type="text/javascript" src="app/controllers/NavController.js"></script>
+    <script type="text/javascript" src="app/controllers/SignupController.js"></script>
+    <script type="text/javascript" src="app/controllers/CitiesController.js"></script>
+    <script type="text/javascript" src="app/controllers/CityController.js"></script>
+    <!-- Services -->
+    <script type="text/javascript" src="app/services/AlertsFactory.js"></script>
+    <script type="text/javascript" src="app/services/AuthFactory.js"></script>
+    <script type="text/javascript" src="app/services/AuthInterceptor.js"></script>
+    <script type="text/javascript" src="app/services/UserFactory.js"></script>
+    <script type="text/javascript" src="app/services/YelpFactory.js"></script>
+    <script type="text/javascript" src="app/services/FlightFactory.js"></script>
+
+    <!-- Angular Parallax -->
+    <script src="//oblador.github.io/angular-scroll/0.6.2/angular-scroll.min.js"></script>
+    <script src="//oblador.github.io/angular-parallax/angular-parallax.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+      <div ng-include="'app/views/navBar.html'"></div>
+      <div ng-controller="AlertsCtrl">
+        <div ng-repeat='alert in alerts'>
+          
+          <div class='alertMessages alert alert-danger' ng-if="alert.type == 'error'">
+            {{ alert.message }}
+          </div>
+
+          <div class='alertMessages alert alert-success' ng-if="alert.type == 'success'">
+            {{ alert.message }}
+          </div>
+
+        </div>
+      </div>
+      <div ui-view></div>
+    </div>
+    <div ng-include="'app/views/footer.html'"></div>
+
+  </body>
+</html>

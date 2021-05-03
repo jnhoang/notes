@@ -1,0 +1,165 @@
+<div class="modal-content">
+  <form>
+  <h4>Sign Up Form</h4>
+    <!-- Name -->
+    <div input-field>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        length="16"
+        ng-model="user.name">
+    </div>
+
+    <!-- Email -->
+    <div input-field>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        ng-model="user.email">
+    </div>
+
+    <!-- Password -->
+      <div input-field>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          length="12"
+          ng-model="user.password">
+      </div>
+
+    <!-- Phone -->
+    <div input-field>
+      <label for="phone">Phone</label>
+      <input
+        type="text"
+        id="phone"
+        length="10"
+        ng-model="user.phone">
+    </div>
+
+    <!-- Profile -->
+    <div input-field>
+      <label for="profilePic">Profile picture: add an Image link</label>
+      <input
+        type="text"
+        id="profilePic"
+        ng-model="user.profilePic">
+    </div>
+
+    <!-- User Type -->
+    <div>
+      <label for="userType">Type of User</label>
+      <select 
+        class="browser-default" 
+        ng-model="user.userType">
+        <option value="" disabled selected>Type of User</option>
+        <option value="user">I Need Help</option>
+        <option value="guru">I Can Help</option>
+      </select>
+    </div>
+
+    <!-- Skills -->
+    <div>
+      <label 
+        ng-show="user.userType == 'guru'">
+        Your Skills
+      </label>
+      <div 
+        class="skillGroup" 
+        ng-show="user.userType == 'guru'">
+        <div>
+          <p>
+            <input
+              id="mobile"
+              type="checkbox"
+              name="skills"
+              class="filled-in"
+              value="mobile"
+              ng-model="user.mobile">
+            <label for="mobile">Mobile</label>
+          </p>
+          <p>
+            <input
+              id="pc"
+              type="checkbox"
+              name="skills"
+              class="filled-in"
+              value="pc"
+              ng-model="user.pc">
+            <label for="pc">PC</label>
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <input
+              id="printer"
+              type="checkbox"
+              name="skills"
+              class="filled-in"
+              value="printer"
+              ng-model="user.printer">
+            <label for="printer">Printer</label>
+          </p> 
+          <p>
+            <input
+              id="homeTheater"
+              type="checkbox"
+              name="skills"
+              class="filled-in"
+              value="homeTheater"
+              ng-model="user.homeTheater">
+            <label for="homeTheater">Home Theater</label>
+          </p> 
+        </div>
+        <div>
+          <p>
+            <input
+              id="homeRouter"
+              type="checkbox"
+              name="skills"
+              class="filled-in"
+              value="homeRouter"
+              ng-model="user.homeRouter">
+            <label for="homeRouter">Home Router</label>
+          </p>
+          <p>
+            <input
+              id="tv"
+              type="checkbox"
+              name="skills"
+              class="filled-in"
+              value="tv"
+              ng-model="user.tv">
+            <label for="tv">Television</label>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text Area -->
+    <div 
+      input-field 
+      ng-show="user.userType == 'guru'">
+      <textarea 
+        id="bio"
+        length="120" 
+        class="materialize-textarea" 
+        ng-model="user.bio"
+        >
+      </textarea>
+      <label>Tell us about yourself</label>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer">
+  <button 
+    ng-click="userSignup()"
+    class="modal-action modal-close waves-effect btn-flat teal white-text">
+    Signup
+  </button>
+</div>

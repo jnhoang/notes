@@ -1,0 +1,14 @@
+<h1 class='text-center'>Pokedex</h1>
+<a href="/#/pokemon">test</a>
+
+<div class='input-group input-group-lg searchBarDiv'>
+	<input type="text" ng-model='name' class='form-control' id='searchBar'>
+	<span class='input-group-btn'>
+		<button class='btn btn-primary' ng-click='search()'>click me</button>		
+	</span>
+</div>
+
+
+<div ng-if='loading'>
+	Loading...
+</div>

@@ -1,0 +1,136 @@
+
+<div class="loadingDiv" ng-if="loading">
+  <i class="loadingSpinner fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+  <span class="sr-only">Loading...</span>
+</div>
+
+<div class="container text-center cityContainer" ng-controller="CitiesCtrl">
+
+  <div ng-if="!loading">
+  <!-- PLANES sidebar -->
+   <!--  <section>
+      <div class="sidebarButton">
+        <i id="planeIcon" class="fa fa-plane fa-4x fa-border" aria-hidden="true" ng-click="showme = !showme"></i>
+      </div>
+      <div class="sidebarGroup" ng-show="showme">
+          <div class="sidebar well">
+            <div ng-if="loadingFlights">
+              Loading...
+            </div>
+
+            <i class="fa fa-arrow-left fa-2x fa-border back" aria-hidden="true" ng-click="showme = !showme"></i>
+            <h3>Flights to {{ city }}</h3>
+            <hr>
+            <h4>Price:    {{ flights.airObj.price }}</h4>
+            <h4>Airline:  {{ flights.airObj.company }}</h4>
+            <h4>Minutes:  {{ flights.airObj.data }}</h4>
+          </div>
+      </div>
+    </section> -->
+  </h4>
+
+<!-- Content after API call -->
+<div class="text-center cityContainer">
+  <div ng-if="!loading">
+    
+    <!-- IMAGE -->
+    <div class="row">
+      <div class="containerbox flex">
+      <h1 class="cityText">{{ city | uppercase }}</h1>
+        <img class="citiesImage" src="http://www.kwm.com/~/media/SjBerwin/Images/Locations/Tokyo-locations.ashx?h=640&w=1800" du-parallax y="background">
+      </div>
+    </div> 
+
+    <!-- TEXT -->
+    <div class="row">
+      <div class="containerbox flex">
+        <h1 class="title">DELICIOUS FOOD</h1>
+      </div>
+    </div>  
+    <!-- IMAGE -->
+    <div class="row">
+      <div class="containerbox flex">
+        <img class="citiesImage" src="http://iamaileen.com/wp-content/uploads/2016/08/teppanyaki-hida-kobe-beef-tokyo-japan-restaurant3.jpg" du-parallax y="background">
+      </div>
+    </div>
+
+    <!-- FOOD SECTION -->
+    <section>
+      <div class="row "> 
+        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="food in topFood track by $index">
+        <div class="row">
+            <h3><a href="{{ food.url }}">{{ food.name }}</a></h3>
+        </div>
+
+        <div class="row">
+          <div class="imageYelp">   
+            <img ng-src="{{ food.image_url }}">
+          </div>
+          <div class="textYelp">
+            {{ food.snippet_text }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="lowerYelp">
+            <img src="{{ food.rating_img_url_large }}">
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- TEXT -->
+    <section>
+    <div class="row">
+      <div class="containerbox flex">
+        <h1 class="title">LOCAL FAVORITES</h1>
+      </div>
+    </div> 
+    <!-- IMAGE -->
+    <div class="row">
+      <div>
+        <img class="citiesImage" src="https://static1.squarespace.com/static/54ce88b3e4b08cdce8e070d8/54efb6d5e4b049918b426ea6/54efd289e4b09bab2ad0147b/1425003145982/lets-travel-to-japan-with-anton-repponen-featured.jpg?format=2500w" du-parallax y="background">
+      </div>
+    </div>
+    
+    <!-- COOL LOCATIONS -->
+      <div class="row "> 
+        <div class="topBox well col-xs-12 col-sm-6 col-md-6 col-lg-4" ng-repeat="spot in topLocal track by $index">
+        <div class="row">
+            <h3><a href="{{ spot.url }}">{{spot.name }}</a></h3>
+        </div>
+
+        <div class="row">
+          <div class="imageYelp">   
+            <img ng-src="{{spot.image_url }}">
+          </div>
+          <div class="textYelp">
+            {{spot.snippet_text }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="lowerYelp">
+            <img src="{{spot.rating_img_url_large }}">
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <div class="row">
+      <div class="containerbox flex">
+        <h1 class="titleBig">ENJOY JAPAN</h1>
+      </div>
+    </div> 
+
+    <!-- IMAGE -->
+    <div class="row">
+      <div>
+        <img class="citiesImage" src="http://kids.nationalgeographic.com/content/dam/kids/photos/Countries/H-P/japan-shibuya-crossing.jpg" du-parallax y="background">
+      </div>
+    </div>
+
+  </div>
+</div>

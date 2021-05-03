@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TexpertApp">
+  <head>
+    <base href="/" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Texpert - Tech Support On Demand</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- Materialize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- JQuery for Materialize JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Angular -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!-- Angular Resource -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.js"></script>
+    <!-- Angular Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <!-- Materialize JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+
+    <!-- Public Files -->
+    <!-- App & Main Routing -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <!-- Routes -->
+    <script type="text/javascript" src="app/routes/authInterceptor.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="app/controllers/NavController.js"></script>
+    <script type="text/javascript" src="app/controllers/AllUsersController.js"></script>
+    <script type="text/javascript" src="app/controllers/SingleUserController.js"></script>
+    <script type="text/javascript" src="app/controllers/HelpBoardController.js"></script>
+
+    <!--Socket and includes-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app/included/ng-lodash/build/ng-lodash.min.js"></script>
+    <script src="app/included/angular-sanitize/angular-sanitize.js"></script>
+    <script src="app/included/ngstorage/ngStorage.min.js"></script>
+    
+    <script type="text/javascript" src='app/controllers/ChatController.js'></script>
+    <script type="text/javascript" src='app/services/SocketFactory.js'></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="app/services/AuthFactory.js"></script>
+    <script type="text/javascript" src="app/services/AuthInterceptor.js"></script>
+    <script type="text/javascript" src="app/services/UserFactory.js"></script>
+    <script type="text/javascript" src="app/services/MessageFactory.js"></script>
+
+
+
+  </head>
+  <body>
+    <div ng-include="'app/views/modals/navBar.html'"></div> 
+    <div ui-view></div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+
+<div class="text-center" ng-hide="isLoggedIn()">
+  <h1>Profile</h1>
+  <h2>Please login to see your profile!</h2>
+</div>
+<container ng-show="isLoggedIn()">
+
+  <container>
+    <div class="form-group">
+      <img class="circle" ng-src="{{currentUser.photo}}">
+    </div>
+    <div class="form-group text-center">
+      <h1>{{currentUser.firstName}} {{currentUser.lastName}}</h1>
+       <h2>{{currentUser.userName}}</h2>
+    </div>
+    <div class="form-group text-center">
+      <h3>{{currentUser.email}}</h3>
+      <h3>{{currentUser.location}}</h3>
+      <a href="/editProfile" class="btn btn-primary">Edit Profile</a>
+    </div>
+
+  </container>
+  <div class="row text-center">
+    <a class="btn btn-large btn-success" href="/createItem">Create new item for sale</a>
+  </div>
+</container>
+  <h2>Items for sale:</h2>
+  <div ng-include="'app/views/userForSale.html'"></div>
+

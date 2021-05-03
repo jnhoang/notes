@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+/*Nav Bar*/
+nav {
+  margin-top: 5px;
+  background-color: grey;
+  border-radius: 3px 3px 0 0;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin: 10px 20px 0 20px;
+  display: inline-block;
+  font-size: 17px;
+}
+a {
+  color: white;
+}
+.searchBar {
+  height: 56px;
+  background-color: blue;
+}
+.navLinks {
+  border-radius: 2px 2px 0 0;
+  background-color: grey;
+  border: none;
+}
+.navLinks:hover {
+  background-color: blue;
+} 
+.infoCarousel {
+  height: 276px;
+  background: url('http://www.fillmurray.com/1140/275');
+}
+
+/*Auction Section*/
+.auctionBox {
+  border: 1px solid #bfbfbf;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,63 @@
+<content>
+<!--   <h1>Petsy</h1>
+  <div class="row">
+    <content ng-repeat='item in items track by item.id'>
+      <div class="col-xs-2 col-m-2">
+        <h2><a ng-href="/item/{{item.id}}">{{item.name}}</a></h2>
+        <img class="searchItemImg" ng-src="{{item.photo}}">
+        <div class="row">
+          <a class="btn btn-success" href="/checkout">Purchase!</a>
+          <button class="btn btn-primary" ng-click='addToCart(item)'>Add to Cart</button>
+        </div>
+      </div>
+    </content>  
+  </div>  --> 
+  <div class="heroImg">
+    <h1 class="heroText">Find your friends whatever they need</h1>
+  </div>
+  <div class="divider10 text-right"></div>
+  
+  <div class="missionStatementContainer">
+    <div class="missionStatementBox">
+      <img class="smallIcon" src="/images/bowtie.png">
+
+      <h4 class="text-justify">Great fashions for furry fashionistas and apparel for warmth and well-being.</h4>
+    </div>
+    <div class="missionStatementBox">
+      <img class="smallIcon" src="/images/dollar.png">
+      <h4 class="text-justify">Make money on old items that are no longer needed.</h4>
+    </div>
+    <div class="missionStatementBox">
+      <img class="smallIcon" src="/images/hand.png">
+      <h4 class="text-justify">Help the environment by keeping refuse out of landfills.</h4>
+    </div>    
+  </div>
+
+  <div>
+    <!-- 3 IMAGES OF STUFF FROM ITEMS ON SALE -->
+    <div class="row">
+      <div ng-repeat='item in items track by item.id'>
+        <div class =' homeItemBox col-xs-12 col-sm-4'>
+          <h2>
+            <a ng-href="/item/{{item.id}}">{{item.name}}</a>
+          </h2>
+          <img class="searchItemImg" ng-src="{{item.photo}}">
+          {{item.price}}
+          <button ng-click='addToCart(item)'>Add to Cart</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <div class="divider10"></div>
+  <div class="text-center">
+    <button type="button" class="btn btn-primary viewMoreBtn"><h1>VIEW MORE</h1></button>
+  </div>
+  <div class="divider10"></div>
+  <div class="divider10"></div>
+
+</content>
+
+<!-- 
+<a href="/checkout">Purchase!</a>
+ -->

@@ -1,0 +1,57 @@
+<div ng-if='!items'>
+  <h2>There aren't any items for sale right now!</h2>
+</div>
+<div ng-if='items' class="container-fluid">
+  
+  <div class="filterBar">
+    <div class="form-group input-group">
+      <input type="text" class="form-control" id="search" ng-model="search" placeholder="Filter Items for Sale">
+    </div>
+    <a class="filterThings" ng-click='filterBy("cat")'>Cat</a>
+    <a class="filterThings" ng-click='filterBy("dog")'>Dog</a>
+    <a class="filterThings" ng-click='filterBy("color")'>Color</a>
+    <a class="filterThings" ng-click='filterBy("cost")'>
+      Cost <span class='glyphicon-arrow-up glyphicon'></span>
+    </a>
+    <a class="filterThings" ng-click='filterBy("color")'>
+      Cost <span class='glyphicon-arrow-down glyphicon'></span>
+    </a>
+
+  </div>
+  <div ng-if='search' class="row">
+    <div class="col xs-2 col-md-2">test</div>
+    <content ng-repeat='item in items | filter: search track by $index'>
+      
+      <div class="text-center col-xs-10 col-md-4 allItemBox">
+        <h2><a ng-href="/item/{{item.id}}">{{item.name}}</a></h2>
+        <img class="text-center searchAllItemImg" ng-src="{{item.photo}}">
+        <p class="text-justify itemText">{{item.description}}</p>
+        <a class="btn btn-primary" href="/checkout">Purchase!</a>
+      </div>
+
+    </content>
+  </div>
+
+
+  <div ng-if='!search' class="row">
+    <content ng-repeat='item in items track by $index'>
+      
+      <div class="text-center col-xs-10 col-md-4 allItemBox">
+        <h2><a ng-href="/item/{{item.id}}">{{item.name}}</a></h2>
+        <img class="searchAllItemImg" ng-src="{{item.photo}}">
+        <p class="text-justify itemText">{{item.description}}</p>
+
+        <div class="row"><!-- 
+          <a class="btn btn-success" href="/checkout">Purchase!</a> -->
+          <button class="btn btn-primary" ng-click='addToCart(item)'>Add to Cart</button>
+        </div>
+      </div>
+
+    </content>
+  </div>
+</div>
+
+
+
+        <!-- <button ng-click='addToCart(item)'>Add to Cart</button>
+        <button ng-click='addToCart(item)'>Add to Cart</button> -->

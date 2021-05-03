@@ -1,0 +1,64 @@
+<h2>{{ title }}</h2>
+
+<form class='form-horizontal'>
+  <label>
+    Search: 
+  </label>
+  <input
+    type="text" 
+    class='form-horizontal'
+    ng-model='searchTerm'
+    >
+  <button
+    ng-click='searchFor()'
+    class='btn btn-info'>
+    Find!
+  </button>
+
+</form>
+
+<p 
+  ng-hide="planes">
+  LOADING PLANES NOW...
+</p>
+
+<a 
+  href="/plane/addPlane" 
+  class='btn btn-link'>
+  Add new plane
+</a>
+
+<div 
+  ng-repeat="p in planes | filter: {$: searchTerm} track by $index" 
+  class="allPlanes">
+
+  <a 
+    ng-href="/plane/{{ p._id }}" 
+    class="btn btn-success">
+    Details
+  </a>
+
+  <button 
+    class="btn btn-danger" 
+    ng-click="deletePlane(p._id)">
+    DELETE
+  </button>
+
+  <h3>
+    <strong>
+      {{ p.manufacturer }}
+    </strong> 
+    {{ p.model }}
+  </h3>
+
+  <img 
+    ng-src="{{ p.image }}">
+</div>
+
+
+
+
+
+
+
+

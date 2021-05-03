@@ -1,0 +1,29 @@
+<br>
+
+<% @posts.each do |p| %>
+  <div>
+    <p>
+      <span class="sub-text">
+        <%= (@posts.index(p) + 1).to_s%>.
+        <%= link_to '<i class="fa fa-caret-up comment-link"></i>'.html_safe, "posts/#{p.id}", method: :put %>  
+      </span>
+      <%= p.title %>
+      <span class="sub-text">
+        <small>(<%= p.link %>)</small>
+      </span>
+    </p>
+
+    <p class="sub-text">
+      <small>
+        <%= p.points %> points by <%= p.user.email %> <%= time_ago_in_words(p.created_at) %> ago | hide | past | web| 
+        <a class="comment-link" href="comments/<%= p.id %>">
+          <% if p.commnets.length > 0 %>
+            <%= p.commnets.length %> comments
+          <% else %>
+            discuss
+          <% end %>
+        </a>
+      </small>  
+    </p>
+  </div>
+<% end %>

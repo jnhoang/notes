@@ -1,0 +1,22 @@
+<form ng-submit="userSignup()">
+  <legend>Signup</legend>
+
+<div class="signUpForm">
+  <div class="form-group">
+    <h1 class="signupTitle"> Sign Up </h1>
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="test@test.com" ng-model="user.email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="********" ng-model="user.password">
+  </div>
+  <div class="form-group">
+    <label for="HomeAirport">Home Airport 3-letter code</label>
+    <input type="text" class="form-control" id="HomeAirport" maxlength='3' placeholder="LAX" ng-model="user.homeAirport">
+    <a href="http://www.nationsonline.org/oneworld/IATA_Codes/IATA_Code_L.htm">Need help? Find your airport</a>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Signup</button>
+</form>
+</div>

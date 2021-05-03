@@ -1,0 +1,34 @@
+img {
+	height: 15em;
+}
+imgBox {
+	width: 25%;
+}
+.searchBarDiv {
+	display: flex;
+	justify-content: center;
+}
+#searchBar {
+	width: 50%;
+}
+.customRow {
+	margin: 0.5em 4em;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+.bottomRow p {
+	font-size: 2em;
+}
+.bottomRow h3 {
+	font-size: 2.25em;
+}
+.pokeName {
+	text-align: center;
+	font-size: 2em;
+}
+.descriptionText {
+	text-align: justify;
+	padding: 15px 40px;
+	font-size: 2em;
+}

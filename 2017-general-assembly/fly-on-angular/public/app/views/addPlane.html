@@ -1,0 +1,58 @@
+<h1>Create a Plane</h1>
+
+<form class="form-group">
+  <label 
+    name="manufacturer">
+    manufacturer:
+  </label>
+
+  <input 
+    type="text" 
+    name="manufacturer"
+    ng-model="planeForm.manufacturer" 
+    class="form-control">
+
+  <label 
+    name="model">
+    model:
+  </label>
+
+  <input 
+    type="text" 
+    name="model"
+    ng-model="planeForm.model" 
+    class="form-control">
+
+  <label 
+    name="engines">
+    engines:
+  </label>
+
+  <input 
+    type="text" 
+    name="engines"
+    ng-model="planeForm.engines"
+    class="form-control">
+
+  <label 
+    name="image">
+    image:
+  </label>
+
+  <input 
+    type="text"
+    ng-model="planeForm.image" 
+    name="image">
+
+</form>
+
+<button  
+  ng-click='addPlane()' 
+  class='btn btn-primary'>
+  Add Plane
+</button>
+
+
+
+
+

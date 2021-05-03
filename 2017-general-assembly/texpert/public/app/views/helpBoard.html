@@ -1,0 +1,52 @@
+<h3 class="center">Help Board</h3>
+
+<div class="container" >
+
+  <!-- CREATE LARGE BUTTON FOR USERS TO MAKE NEW HELP REQUEST -->
+  <div 
+    ng-if="currentUserInfo.userType == 'user'">
+    <a class="btn btn-large btn-block" data-target="helpModal" modal>Get Help</a>
+  </div>
+
+  <!-- RENDER ALL REQUESTS FOR GURUS -->
+  <div class="row">
+    <div ng-if="currentUserInfo.userType == 'guru' && message.claimed != 'archive'" ng-repeat="message in messageList track by $index">
+      <div class="col s12 m4">
+
+        <!-- Single Message -->
+        <div class="card teal">
+          <div class="card-content white-text center">
+            <h5>{{ message.issueTitle }}</h5>
+            <img 
+              ng-src="{{ message.userPhoto }}"
+              class="responsive-img userImg allUserImg">
+            <strong>
+              <p>{{ message.device }}</p>
+            </strong>
+            <p class="profileBio">{{ message.description }}</p>
+          </div>
+          
+          <div class="section center">
+            <a 
+              href="#"
+              ng-click="createUserLink()"
+              class="btn deep-purple">
+              Assist
+            </a>
+          </div>
+        </div>
+        <!-- Single Message End -->
+
+      </div>      
+    </div>
+  </div>
+  
+
+</div>
+
+<!-- helpform modal -->
+<div 
+  id="helpModal" 
+  class="modal">
+  <div ng-include="'app/views/modals/helpRequestForm.html'"></div>
+</div>

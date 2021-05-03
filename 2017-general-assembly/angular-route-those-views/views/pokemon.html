@@ -1,0 +1,44 @@
+<div ng-if='loading'>
+	Loading...
+</div>
+
+<div ng-if='!loading'>
+	<div class='customRow'>
+		<div class='imgBox'>
+		 	<img ng-src='{{pokemonData.sprites.front_default}}'>		
+			<p class='pokeName'>{{ pokemonData.name }}</p>
+		</div>
+		<p class='descriptionText'>{{ speciesData.flavor_text_entries[1].flavor_text }}</p>
+	</div>
+
+	<div class='customRow bottomRow'>
+		<div>
+			<h3><u>Stats</u></h3>
+			<p ng-repeat='stat in pokemonData.stats'>
+				{{ stat.stat.name }}: {{ stat.base_stat }}
+			</p>
+		</div>
+		<div>
+			<div>
+				<h3><u>Abilities</u></h3>
+				<div>
+					<p ng-repeat='ability in pokemonData.abilities'>{{ ability.ability.name }}</p>
+				</div>
+			</div>
+
+			<div>
+				<h3><u>Category</u></h3>
+				<p>{{ speciesData.genera[0].genus }}</p>
+			</div>
+
+			<div>
+				<h3><u>Types</u></h3>
+				<p ng-repeat='type in pokemonData.types'>
+					{{ type.type.name }}
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+

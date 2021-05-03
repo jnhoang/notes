@@ -1,0 +1,57 @@
+<div class="container">
+  <!-- Chat Box -->
+  <h2 class="center"> Welcome <b>{{mynickname}}!</b></h2>
+    <div class="col-md-8">
+
+      <form>
+        <div class='input-group'>
+          <!-- Enter Message to Chat -->
+          <input 
+            class='input-sm form-control'
+            ng-model='message'
+            type='text'
+            placeholder="Type a message...">
+          <span class='input-group-btn'>
+            <!-- Submit message to chat box -->
+            <input class='btn btn-default deep-purple'
+            type='submit'
+            ng-click='sendMessage()'
+            value='Send'>
+
+            <!-- Complete Chat Button -->
+            <a
+              ng-if="currentUserInfo.userType != 'guru'"
+              href=""
+              class="right btn waves-effect btn-flat teal white-text"
+              data-target="completeChatModal" modal>
+              Complete Chat
+            </a>
+          </span>          
+        </div>
+      </form>
+
+      <br>
+      <!-- Chat Box -->
+      <div class='card teal' id='chat_history'>
+          <ul class='list-unstyled'>
+            <li ng-repeat='m in messages'>
+              <i class='fa fa-comment'></i>
+              <!--<img ng-src="{{ originalIssueForm.userPhoto }}" class="responsive-img chatImg circle">-->
+              &nbsp;
+              <p class="chatText white-text"><b>{{m.from}} </b>:
+              &nbsp;
+              {{m.message}}</p>
+            </li>
+          </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  id="completeChatModal"
+  class="modal">
+  <div ng-include="'app/views/modals/completeChatSession.html'"></div>
+</div>

@@ -1,0 +1,20 @@
+<!-- partial -->
+<div ng-if='!saleItems'>
+  <h2>You don't have any items for sale right now! <a href="/createItem">Add a sale item.</a></h2>
+</div>
+
+<content class="row" ng-if='saleItems'>
+  <div ng-repeat='item in saleItems track by $index'>
+    <div class="col-xs-2">
+      <img class="searchItemImg" ng-src="{{item.photo}}">
+      <div class="row">
+        <h2><a ng-href="/item/{{item.id}}">{{item.name}}</a></h2>
+        <h4>{{item.price}}</h4>
+      </div>
+      <div class="row">
+        <a class="btn btn-primary" href="/editItem/{{item.id}}">Edit</a>
+        <!-- <button ng-click='deleteItem(item)' class="btn btn-danger">X</button> -->
+      </div>
+    <div>
+  </div>
+</content>

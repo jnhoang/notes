@@ -1,0 +1,8 @@
+.allPlanes {
+  display: flex;
+  align-items: center;
+}
+img {
+  height: 400px;
+  width: 60%;
+}

@@ -1,0 +1,35 @@
+<div class="row">
+  <a class="text-left" href="/allForSale">< Return to Search Page</a>
+</div>
+
+<div class="row">
+  <div class="col-xs-3">
+    <img ng-src="{{item.photo}}">
+  </div>
+  <div>
+    <h1>{{item.name}}</h1>
+    <h3>{{item.price}}</h3>
+    <p>{{item.size}}</p>
+    <p>{{item.condition}}</p>
+  </div> 
+  <div class="row">
+<!--     <a class="btn btn-success" href="/checkout">Purchase!</a> -->
+    <button class="btn btn-primary" ng-click='addToCart(item)'>Add to Cart</button>
+  </div> 
+</div>
+<div class="row">
+  <div>
+    <p>DESCRIPTION: {{item.description}}</p>
+  </div>
+</div>
+<div class="row">
+  <div>
+    <h4>Seller: {{user.userName}}</h4>
+    <p>Location: {{user.location}}</p>
+  </div>
+</div>
+
+<p>species: {{item.species}}</p>
+
+
+  
