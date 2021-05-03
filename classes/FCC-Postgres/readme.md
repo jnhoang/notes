@@ -2,10 +2,15 @@
 
 # Commands
 ```
+psql          -  connect to psql (via cli)
+
 \l            -  list of databases
 \c DB_NAME    -  connect to any database
 \d            -  show tables
 \d TABLE_NAME -  show table description
+
+DROP DATABASE <DB_NAME>; - delete a database
+  - ie - DROP DATABASE test;
 ```
 
 # Other
