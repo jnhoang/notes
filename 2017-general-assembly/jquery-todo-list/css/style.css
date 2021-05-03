@@ -1,0 +1,50 @@
+* {
+	font-family: 'VT323', monospace;	
+}
+body {
+	background-image: url('./../img/8bit.gif');
+}
+h1 {
+	color: white;
+}
+ul {
+	list-style: none;
+}
+li {
+	font-size: 28px;
+	width: 100%;
+	height: 42px;
+	margin: 10px 20px;
+	line-height: 38px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+	box-shadow: 2px 2px 2px 1px #CC005D;
+	background-color: rgba(0,0,0, 0.8);
+	color: white;
+}
+#nextEntry {
+	height: 32px;
+	font-size: 18px;
+}
+.todoContainer {
+	width: 500px;
+	height: 70vh;
+	background-color: rgba(255,255,255, 0.3);
+	box-shadow: 23px 23px 8px 11px #CC005D;
+
+}
+#todoList { 
+	list-style-type: none; 
+	padding: 10px 0;
+	width: 90%; 
+}
+todoList li { 
+	margin: 0 3px 3px 3px; 
+	padding: 0.4em; 
+	padding-left: 1.5em; 
+	font-size: 1.4em; 
+	height: 18px; 
+}
+

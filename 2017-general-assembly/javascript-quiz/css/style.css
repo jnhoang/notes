@@ -1,0 +1,69 @@
+body{
+    text-align: center;
+    background: url("./../image/large mgsb pic.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 30px;
+    color:white;
+    font-family: "Dust", Eraser, Serif;
+}
+#questionsBoard{
+    background-color: black;
+    position: relative;
+    display: inline-block;
+    width: 720px;
+    height: 300px;
+    font-family: "Dust", Eraser, Serif;
+    border: 5px #905e26 solid;
+    border-radius: 10px;
+}
+#scoreBoard {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    font-family: "Dust", Eraser, Serif;
+    border: 5px #905e26 solid;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+#timerBoard{
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+}
+#timeDisplay{
+    background-color: black;
+    /*display: block;*/
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    margin-left: 8px;
+    border: 5px #905e26 solid;
+    border-radius: 10px;
+}
+#feedbackBox {
+	background-color: black;
+    height: 100px;
+    width: 300px;
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 8px;
+    border: 5px #905e26 solid;
+    border-radius: 10px;
+    visibility: hidden;
+}
+h1{
+    color: black;
+    display: inline-block;
+    background-color: white;
+    text-align: right;
+    font-family: "Dust", Eraser, Serif;
+    font-size: 50px;
+}
+h2{
+    text-align: left;
+}

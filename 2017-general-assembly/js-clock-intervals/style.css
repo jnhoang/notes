@@ -1,0 +1,19 @@
+#clock {
+}
+
+#face {
+	z-index: -1;
+}
+
+#hour {
+}
+
+#minute {
+}
+
+#second {
+	z-index: 1;
+}
+.position {
+	position: absolute;
+}

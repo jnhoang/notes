@@ -1,0 +1,11 @@
+#adam {
+	background: url('adam.png');
+	width: 120px;
+	height: 180px;
+	animation: walk-east 1.0s steps(8) infinite;
+	-webkit-animation: walk-east 1.0s steps(8) infinite;
+}
+@keyframes walk-east {
+	from { background-position: 0px; }
+	to { background-position: -960px; }
+}
