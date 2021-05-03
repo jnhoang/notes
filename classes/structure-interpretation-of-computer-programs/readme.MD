@@ -123,3 +123,15 @@
 
 * Definition - can take procedures as input or give a procedure as an output
 * application - capture common patterns and procedures (computations) and mapping them to values.
+
+
+# Lesson 7: Good Programming Practices, Trees
+
+## Parts of Documentation for code
+* Description of input/output
+* expected orrequired types of params
+* types
+  * can help planning code
+  * as an entry check for debugging
+* list of constraints for the params
+* expected state of computation at key points in the code
