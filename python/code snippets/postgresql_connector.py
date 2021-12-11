@@ -1,22 +1,27 @@
 """ POSTGRESQL DB class """
+""" POSTGRESQL DB class """
 import psycopg2
+import os
 from dotenv  import load_dotenv
 from os.path import join, dirname
 
-from <APP>.exceptions  import DatabaseUniqueException, BadRequestException
+
+class BadRequestException(Exception):
+  pass
+class DatabaseUniqueException(Exception):
+  pass
 
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
 
-
 class DbConnector():
 
-  host     =  os.gent_env('DB_HOST')
-  port     =  os.gent_env('DB_PORT')
-  user     =  os.gent_env('DB_USER')
-  password =  os.gent_env('DB_PASSWORD')
-  db_name  =  os.gent_env('DB_NAME')
+  host     =  os.getenv('DB_HOST')
+  port     =  os.getenv('DB_PORT')
+  user     =  os.getenv('DB_USER')
+  password =  os.getenv('DB_PASSWORD')
+  db_name  =  os.getenv('DB_NAME')
 
 
   def __init__(self):
@@ -117,5 +122,3 @@ class DbConnector():
     self.conn.rollback()
     self.conn.close()
     return
-
-
