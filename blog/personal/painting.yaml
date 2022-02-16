@@ -1,0 +1,58 @@
+metadata:
+  model  :  'black templar'
+  army   :  'space marine'
+  origin :  'https://www.youtube.com/watch?v=hLRSCV6N1IU'
+
+armor:
+  - base             :  'any black'
+  - edge_highlight_1 :  'dark reaper'
+  - edge_highlight_2 :  'dawnstone'
+  - edge_highlight_3 :  'administratum grey / celestra grey'
+
+shoulder_plate :
+  - base  :  'corax white'
+  - shade :  'agrax earthshade (recesses)'
+
+tabard :
+  - base           :  'rakarth'
+  - shade          :  'agrax earthshade (all)'
+  - layer_1        :  'rakarth'
+  - layer_2        :  'ushabti bone'
+  - edge_highlight :  'screaming skull / mig bone'
+
+leather :
+  - base      :  'mournfang brown/earth brown'
+  - highlight :  'skrag brown / steel legion brown'
+
+weapons/parchment :
+  - base           :  'khorne red'
+  - shade          :  'nuln oil (all)'
+  - layer          :  'khorne red (flat surface)'
+  - edge_highlight :  'evil sunz scarlet'
+
+parchment:
+  - base           :  'khorne red'
+  - shade          :  'nuln oil (all)'
+  - layer          :  'khorne red (flat surface)'
+  - edge_highlight :  'evil sunz scarlet (flat surface)'
+  - detail         :  'scribble white for text'
+
+joints :
+  - base      :  'eshin grey'
+  - shade     :  'nuln oil'
+  - highlight :  'dawnstone'
+
+metal/vents/chains :
+  - base      :  'leadbelcher'
+  - shade     :  'nuln oil'
+  - highlight :  'ironbreaker'
+
+aquila :
+  - base      :  'bronze / retributor gold'
+  - highlight :  'liberator gold'
+
+eyes :
+  steps :
+    1 :  'matte white, in the horizontal center'
+    2 :  'glaze, blood angels red (contrast)'
+    3 :  'redefine the white'
