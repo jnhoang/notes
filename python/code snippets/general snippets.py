@@ -17,6 +17,15 @@ print(multi_line_tuple)
 
 
 """
+  READ FROM A PARENT DIR
+"""
+from os.path import join, dirname
+with open(join(dirname(__file__), '../<FILE_NAME')) as f:
+  foo = f.readline()
+f.close()
+
+
+"""
   READ FROM A .ENV FILE
   * pip install python-dotenv
 """
